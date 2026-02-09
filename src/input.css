@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-secondary: "Delius Swash Caps", cursive;
+  --font-ternary: "Bonheur Royale", cursive;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

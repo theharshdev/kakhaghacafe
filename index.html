@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Delius+Swash+Caps&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Ka Kha Gha Cafe</title>
+  </head>
+  <body class="bg-amber-100 text-amber-950 text-2xl font-secondary">
+    <!-- Navbar -->
+    <nav
+      class="font-ternary flex justify-between items-start gap-4 w-full fixed top-0 left-1/2 -translate-x-1/2 p-4 z-50 max-w-7xl mx-auto"
+    >
+      <p class="text-5xl bg-amber-400">
+        Ka Kha
+        <br />
+        Gha Cafe
+      </p>
+      <button type="button" class="p-0 bg-transparent outline-0 border-0 text-3xl">Menu</button>
+    </nav>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- Hero section -->
+        <main class="flex justify-center items-center gap-1 flex-col h-dvh text-center max-w-4xl mx-auto">
+          <p class="text-sm">Est. 2024 • Fine Dining</p>
+          <h2 data-speed="1.1" class="text-[200px] font-ternary relative">
+            Ka Kha Gha
+            <span class="absolute bottom-9 right-0 text-4xl text-amber-500">Cafe</span>
+          </h2>
+          <p class="text-sm">
+            Where Italian Meets Indian Royalty — A culinary journey through two of the world's greatest cuisines
+          </p>
+        </main>
+        <!-- About section -->
+        <section class="flex items-center justify-center gap-8 max-w-4xl mx-auto py-20">
+          <div class="flex flex-col gap-12">
+            <p class="text-4xl font-ternary border-b border-amber-950 pb-3 border-dashed">Our Story</p>
+            <h3 class="text-8xl font-ternary">A Tale of Two Cuisines</h3>
+            <p class="text-3xl font-light">
+              Born from a passion to unite Italy's rustic charm with North India's royal grandeur, La Regale is more
+              than a restaurant — it's a cultural symphony on your plate. Our chefs have trained in the kitchens of Rome
+              and the royal courts of Lucknow, bringing centuries of culinary tradition to every dish.
+              <br />
+              <br />
+              From hand-rolled pasta infused with saffron to tandoori platters served on artisanal copper, every detail
+              is crafted to transport you to a world where flavor knows no borders.
+            </p>
+          </div>
+          <img
+            data-speed="1.5"
+            src="./assets/img/bg.jpg"
+            alt="..."
+            class="block w-full border-2 p-4 border-dashed border-amber-950"
+          />
+        </section>
+        <!--  -->
+        <section class="flex gap-6 items-center justify-between max-w-4xl mx-auto text-center py-20">
+          <div data-speed="1">
+            <p class="text-9xl font-ternary font-medium">15+</p>
+            <p class="text-sm font-secondary">Years of Excellence</p>
+          </div>
+          <div data-speed="1.3">
+            <p class="text-9xl font-ternary font-medium">50+</p>
+            <p class="text-sm font-secondary">Signature Dishes</p>
+          </div>
+          <div data-speed="1.6">
+            <p class="text-9xl font-ternary font-medium">2</p>
+            <p class="text-sm font-secondary">Culinary Worlds</p>
+          </div>
+        </section>
+        <div class="h-dvh"></div>
+        <div class="h-dvh"></div>
+        <div class="h-dvh"></div>
+        <div class="h-dvh"></div>
+        <div class="h-dvh"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
