@@ -119,6 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const fadeIns = document.querySelectorAll(".fadeIn");
   const menuContainer = document.getElementById("menuContainer");
   const menuBtn = document.getElementById("menu-btn");
+  const closeImgPopup = document.getElementById("closeImgPopup");
+  const popupImg = document.getElementById("popupImg");
+  const imagePopup = document.getElementById("imagePopup");
   const menuPopup = document.getElementById("menu-popup");
   const menuCloses = document.querySelectorAll(".menu-close-btn");
   const homebtns = document.querySelectorAll(".home-btn");
@@ -174,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: wrapper,
       start: "top top",
-      end: () => `+=${section.scrollWidth}`,
+      end: () => `+=${section.scrollWidth * 0.35}`,
       scrub: 1,
       pin: true,
       invalidateOnRefresh: true,
@@ -255,4 +258,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener("scroll", updateProgress);
   window.addEventListener("resize", updateProgress);
+
+  scrollImgs.forEach((scrollImg) => {
+    scrollImg.addEventListener("click", () => {
+      const currentPath = scrollImg.getAttribute("src");
+      popupImg.setAttribute("src", currentPath);
+
+      gsap.to(imagePopup, {
+        scale: 1,
+        opacity: 1,
+        duration: 0.3,
+      });
+    });
+  });
+
+  closeImgPopup.addEventListener("click", () => {
+    gsap.to(imagePopup, {
+      scale: 0,
+      opacity: 0,
+      duration: 0.3,
+    });
+  });
 });
