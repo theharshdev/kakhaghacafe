@@ -15,21 +15,55 @@
     <title>Ka Kha Gha Cafe</title>
   </head>
   <body class="bg-amber-100 text-amber-950 text-2xl font-secondary italic">
+    <!-- Vertical Scroll Progress -->
+    <div id="progressBar" class="fixed top-0 left-0 w-0 z-50 bg-amber-500 h-1 transition duration-500"></div>
     <!-- Navbar -->
     <nav
       class="font-ternary flex justify-between items-start gap-4 w-full fixed top-0 left-1/2 -translate-x-1/2 p-4 z-50 max-w-7xl mx-auto"
     >
-      <p class="text-4xl bg-amber-400">
+      <p class="home-btn text-4xl bg-amber-400 cursor-pointer">
         Ka Kha
         <br />
         Gha Cafe
       </p>
-      <button type="button" class="p-0 bg-transparent outline-0 border-0 text-3xl">Menu</button>
+      <!-- Menu open btn -->
+      <button
+        id="menu-btn"
+        type="button"
+        class="p-0 bg-transparent outline-0 text-[0px] border-0 transition duration-500 hover:rotate-12"
+      >
+        Menu
+        <img src="./assets/img/menu.png" alt="..." class="w-14" />
+      </button>
+      <!-- Menu Popup -->
+      <div
+        id="menu-popup"
+        class="absolute top-4 right-0 bg-amber-400 text-3xl p-12 border-2 border-dashed shadow-2xl border-amber-950 rounded-lg flex flex-col gap-6 min-w-100 items-start font-secondary z-10 scale-0 opacity-0 origin-top-right"
+      >
+        <!-- Menu close btn -->
+        <button type="button" class="p-0 bg-transparent menu-close-btn border-0 outline-0 w-full text-end text-2xl">
+          <i class="bi bi-x-lg"></i>
+          <span class="hidden">Close</span>
+        </button>
+        <button type="button" class="home-btn p-0 bg-transparent menu-close-btn border-0 outline-0 mt-6">Home</button>
+        <button id="about-btn" type="button" class="p-0 bg-transparent menu-close-btn border-0 outline-0">About</button>
+        <button id="showcase-btn" type="button" class="p-0 bg-transparent menu-close-btn border-0 outline-0">
+          Showcase
+        </button>
+        <button id="gotomenu-btn" type="button" class="p-0 bg-transparent menu-close-btn border-0 outline-0">
+          Menu
+        </button>
+        <button type="button" class="p-0 bg-transparent menu-close-btn border-0 outline-0">Contact</button>
+        <button type="button" class="p-0 bg-transparent menu-close-btn border-0 outline-0">Career</button>
+      </div>
     </nav>
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <!-- Hero section -->
-        <main class="flex justify-center items-center gap-1 flex-col h-dvh text-center max-w-4xl mx-auto">
+        <main
+          id="home-section"
+          class="flex justify-center items-center gap-1 flex-col h-dvh text-center max-w-4xl mx-auto"
+        >
           <p class="text-sm inViewAnimation">Est. 2024 • Fine Dining</p>
           <h2 data-speed="1.1" class="text-[200px] font-ternary relative fadeIn">
             Ka Kha Gha
@@ -40,14 +74,18 @@
           </p>
         </main>
         <!-- About section -->
-        <section class="flex items-center justify-center gap-8 max-w-4xl mx-auto py-20">
+        <section id="about-section" class="flex items-center justify-center gap-8 max-w-4xl mx-auto py-20">
           <div class="flex flex-col gap-12">
-            <p class="text-4xl font-ternary border-b border-amber-950 pb-3 border-dashed inViewAnimation">Our Story</p>
+            <p
+              class="text-xl font-ternary border rounded-full border-amber-950 w-fit py-2 px-12 border-dashed inViewAnimation"
+            >
+              Our Story
+            </p>
             <h3 class="text-8xl font-ternary inViewAnimation">
               A Tale of
               <span class="text-amber-500">Two Cuisines</span>
             </h3>
-            <p class="text-3xl font-light inViewAnimation">
+            <p class="text-2xl font-light inViewAnimation">
               Born from a passion to unite Italy's rustic charm with North India's royal grandeur, La Regale is more
               than a restaurant — it's a cultural symphony on your plate. Our chefs have trained in the kitchens of Rome
               and the royal courts of Lucknow, bringing centuries of culinary tradition to every dish.
@@ -57,15 +95,53 @@
               is crafted to transport you to a world where flavor knows no borders.
             </p>
           </div>
-          <img
-            data-speed="1.5"
-            src="./assets/img/bg.jpg"
-            alt="..."
-            class="block w-full border-2 p-4 border-dashed border-amber-950"
-          />
+          <img data-speed="1.25" src="./assets/img/bg.jpg" alt="..." class="block w-full rounded-lg" />
+        </section>
+        <!-- LGBTQ+ & Cuisine -->
+        <section class="py-20 px-4 max-w-4xl mx-auto">
+          <!-- Cuisine Cards -->
+          <div class="grid md:grid-cols-2 gap-8 text-center mb-20">
+            <!-- Italian Cuisine -->
+            <div>
+              <img src="./assets/img/salad.png" alt="..." class="max-w-24 w-full block mb-6 mx-auto inViewAnimation" />
+              <h3 class="text-2xl mb-4 inViewAnimation">Italian Cuisine</h3>
+              <p class="text-sm inViewAnimation">
+                From handcrafted pasta and wood-fired pizzas to creamy risottos and decadent desserts, our Italian menu
+                brings you comforting flavors made with love.
+              </p>
+            </div>
+            <!-- North Indian Cuisine -->
+            <div>
+              <img src="./assets/img/laddoo.png" alt="..." class="max-w-24 w-full block mb-6 mx-auto inViewAnimation" />
+              <h3 class="text-2xl mb-4 inViewAnimation">North Indian Cuisine</h3>
+              <p class="text-sm inViewAnimation">
+                Experience the richness of North Indian spices, from buttery curries and aromatic biryanis to freshly
+                baked naan straight from the tandoor.
+              </p>
+            </div>
+          </div>
+          <!-- LGBTQ+ -->
+          <div>
+            <div class="flex justify-center mb-12">
+              <span class="text-xl flex flex-col gap-6 justify-center items-center inViewAnimation">
+                <img src="./assets/img/heart.png" alt="..." class="max-w-24 w-full block" />
+                LGBTQ+ Friendly
+              </span>
+            </div>
+            <!-- Heading -->
+            <h2 class="text-6xl text-center mb-6 font-ternary inViewAnimation">
+              A Safe & Welcoming Space for Everyone
+            </h2>
+            <!-- Description -->
+            <p class="text-center max-w-3xl mx-auto text-sm inViewAnimation">
+              At our restaurant, we celebrate love, diversity, and inclusion. Whether you're here to enjoy authentic
+              Italian flavors or indulge in rich North Indian cuisine, you'll always find warmth, respect, and
+              acceptance at our table.
+            </p>
+          </div>
         </section>
         <!-- Numbers Section -->
-        <section class="flex gap-6 items-center justify-between max-w-4xl mx-auto text-center py-20">
+        <section class="flex gap-6 items-center justify-between max-w-4xl mx-auto text-center py-32">
           <div data-speed="1">
             <p class="text-9xl font-ternary font-medium inViewAnimation">15+</p>
             <p class="text-sm font-secondary inViewAnimation">Years of Excellence</p>
@@ -80,7 +156,7 @@
           </div>
         </section>
         <!-- Gallery Section -->
-        <div class="horizontal-wrapper overflow-hidden h-dvh w-full flex items-center relative">
+        <div id="gallery" class="horizontal-wrapper overflow-hidden h-dvh w-full flex items-center relative">
           <span class="absolute top-12 left-1/2 -translate-x-1/2 text-lg italic">Chef's Creations</span>
           <span class="absolute bottom-12 left-1/2 -translate-x-1/2 text-lg italic">From Our Kitchen</span>
           <section class="flex items-center gap-6 horizontal-section w-full h-full">
@@ -93,221 +169,221 @@
             <img
               src="./assets/img/gallery-img_1.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_2.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_3.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_4.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_5.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_6.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_7.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_8.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_9.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_10.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
 
             <img
               src="./assets/img/gallery-img_11.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_12.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_13.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_14.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_15.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_16.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_17.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_18.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_19.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_20.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
 
             <img
               src="./assets/img/gallery-img_21.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_22.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_23.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_24.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_25.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_26.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_27.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_28.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_29.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_30.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
 
             <img
               src="./assets/img/gallery-img_31.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_32.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_33.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_34.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_35.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_36.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_37.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_38.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_39.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_40.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
 
             <img
               src="./assets/img/gallery-img_41.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_42.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <img
               src="./assets/img/gallery-img_43.webp"
               alt="..."
-              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 scrollImg"
+              class="block w-sm h-2/3 object-cover shrink-0 max-h-200 rounded-lg border-3 border-dashed border-amber-400"
             />
             <div
               class="w-dvw shrink-0 text-9xl text-center flex flex-col justify-center items-center h-full font-ternary fadeIn"
@@ -318,7 +394,7 @@
           </section>
         </div>
         <!-- Menu -->
-        <section class="max-w-4xl mx-auto px-4 py-20">
+        <section id="menu" class="max-w-4xl mx-auto px-4 py-20">
           <div class="text-center max-w-lg mx-auto mt-20 mb-32">
             <h2 class="text-9xl mb-6 font-ternary text-amber-500 relative leading-none">
               <span data-speed="1.1" class="absolute bottom-0 right-0 w-1/2 h-3/4 bg-amber-200 block"></span>
@@ -330,12 +406,48 @@
             </p>
           </div>
           <div id="menuContainer" class="space-y-20"></div>
+          <p class="text-xl text-center mt-20 font-medium inViewAnimation">and many more...</p>
         </section>
+        <!-- Some Words -->
+        <div class="bg-linear-to-b from-amber-100 via-amber-300 to-amber-100 py-32">
+          <div class="h-dvh flex justify-center items-center">
+            <div class="max-w-md flex flex-col justify-center items-center gap-6 text-center">
+              <h3 class="text-6xl font-ternary inViewAnimation">A Culinary Escape in the Heart of Noida</h3>
+              <p class="text-sm inViewAnimation">
+                Located in the vibrant city of Noida, our restaurant offers a unique dining experience that blends
+                elegance with comfort. Whether you're planning a romantic dinner, a family gathering, or a casual outing
+                with friends, our warm ambiance and thoughtfully designed interiors create the perfect setting for every
+                occasion.
+              </p>
+            </div>
+          </div>
+          <div class="h-dvh flex justify-center items-center">
+            <div class="max-w-md flex flex-col justify-center items-center gap-6 text-center">
+              <h3 class="text-6xl font-ternary inViewAnimation">Rich & Royal North Indian Cuisine</h3>
+              <p class="text-sm inViewAnimation">
+                Experience the bold spices and aromatic flavors of North India with our carefully curated menu. From
+                buttery curries and flavorful biryanis to freshly baked naan from the tandoor, every bite reflects the
+                richness of India's culinary heritage, crafted with passion and precision.
+              </p>
+            </div>
+          </div>
+          <div class="h-dvh flex justify-center items-center">
+            <div class="max-w-md flex flex-col justify-center items-center gap-6 text-center">
+              <h3 class="text-6xl font-ternary inViewAnimation">Authentic Italian Flavours</h3>
+              <p class="text-sm inViewAnimation">
+                Indulge in the rich and comforting tastes of Italy with our handcrafted pasta, wood-fired pizzas, creamy
+                risottos, and indulgent desserts. Each dish is prepared using fresh ingredients and traditional
+                techniques to bring you an authentic Italian experience right here in Noida.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
