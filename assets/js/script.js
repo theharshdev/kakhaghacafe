@@ -7,22 +7,26 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           name: "Pao Bhaji Shots",
           price: 374,
-          description: "A playful twist on the classic, buttery paos served with rich spiced bhaji.",
+          description:
+            "A playful twist on the classic, buttery paos served with rich spiced bhaji.",
         },
         {
           name: "Miniature Burgers",
           price: 374,
-          description: "1-inch aloo tikki sliders — tiny, soulful, and irresistible.",
+          description:
+            "1-inch aloo tikki sliders — tiny, soulful, and irresistible.",
         },
         {
           name: "Cream Cheese & Mushroom Dumplings",
           price: 394,
-          description: "Soft dumplings filled with creamy mushrooms and cheese.",
+          description:
+            "Soft dumplings filled with creamy mushrooms and cheese.",
         },
         {
           name: "Cheese Stuffed Crimson Kebabs",
           price: 374,
-          description: "Beetroot and garden vegetables filled with molten cheese.",
+          description:
+            "Beetroot and garden vegetables filled with molten cheese.",
         },
         {
           name: "Stuffed Masala Chaap",
@@ -38,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           name: "Vegetarian Cheeseburger Sandwich",
           price: 319,
-          description: "Juicy veg patty layered with cheddar, lettuce, and tangy sauces.",
+          description:
+            "Juicy veg patty layered with cheddar, lettuce, and tangy sauces.",
         },
         {
           name: "Bean N Cheese Burger",
@@ -278,5 +283,31 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0,
       duration: 0.3,
     });
+  });
+
+  // Quotes animation
+  const videoSection = document.querySelector("#videoSection");
+  const quotes = gsap.utils.toArray(".quote");
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: videoSection,
+      start: "top top",
+      end: "+=500%",
+      scrub: true,
+      pin: true,
+    },
+  });
+
+  // Quotes animation
+  quotes.forEach((quote, i) => {
+    if (i !== quotes.length - 1) {
+      tl.to(quote, { opacity: 1, duration: 0.5 }).to(quote, {
+        opacity: 0,
+        duration: 0.5,
+      });
+    } else {
+      tl.to(quote, { opacity: 1, duration: 0.5 });
+    }
   });
 });

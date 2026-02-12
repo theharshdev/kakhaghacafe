@@ -12,3 +12,7 @@ button {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.font-secondary {
+  font-style: italic;
+}
