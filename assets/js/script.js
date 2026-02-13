@@ -7,26 +7,22 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           name: "Pao Bhaji Shots",
           price: 374,
-          description:
-            "A playful twist on the classic, buttery paos served with rich spiced bhaji.",
+          description: "A playful twist on the classic, buttery paos served with rich spiced bhaji.",
         },
         {
           name: "Miniature Burgers",
           price: 374,
-          description:
-            "1-inch aloo tikki sliders — tiny, soulful, and irresistible.",
+          description: "1-inch aloo tikki sliders — tiny, soulful, and irresistible.",
         },
         {
           name: "Cream Cheese & Mushroom Dumplings",
           price: 394,
-          description:
-            "Soft dumplings filled with creamy mushrooms and cheese.",
+          description: "Soft dumplings filled with creamy mushrooms and cheese.",
         },
         {
           name: "Cheese Stuffed Crimson Kebabs",
           price: 374,
-          description:
-            "Beetroot and garden vegetables filled with molten cheese.",
+          description: "Beetroot and garden vegetables filled with molten cheese.",
         },
         {
           name: "Stuffed Masala Chaap",
@@ -42,8 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           name: "Vegetarian Cheeseburger Sandwich",
           price: 319,
-          description:
-            "Juicy veg patty layered with cheddar, lettuce, and tangy sauces.",
+          description: "Juicy veg patty layered with cheddar, lettuce, and tangy sauces.",
         },
         {
           name: "Bean N Cheese Burger",
@@ -139,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menuData.forEach((section) => {
     const categoryEl = document.createElement("div");
     categoryEl.innerHTML = `
-    <h2 class="text-6xl mb-12 font-ternary pb-6 border-b border-amber-950 border-dashed">
+    <h2 class="text-6xl mb-12 font-ternary pb-6 border-b border-amber-900 border-dashed">
       ${section.category}
     </h2>
     <div class="grid md:grid-cols-2 gap-8">
@@ -209,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 0.3,
     });
   });
+
   // Closing popup menu
   menuCloses.forEach((menuClose) => {
     menuClose.addEventListener("click", () => {
@@ -238,6 +234,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("about-btn").addEventListener("click", () => {
     gsap.to(window, {
       scrollTo: "#about-section",
+    });
+  });
+
+  // letting contact section in view
+  document.getElementById("contact").addEventListener("click", () => {
+    gsap.to(window, {
+      scrollTo: "#contact-section",
+    });
+  });
+
+  // letting order section in view
+  document.getElementById("orderBtn").addEventListener("click", () => {
+    gsap.to(window, {
+      scrollTo: "#order-section",
     });
   });
 
@@ -297,6 +307,16 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: true,
       pin: true,
     },
+  });
+
+  gsap.to("#bgCupImg", {
+    scrollTrigger: {
+      trigger: videoSection,
+      start: "top top",
+      end: "+=500%",
+      scrub: true,
+    },
+    rotate: 360,
   });
 
   // Quotes animation
