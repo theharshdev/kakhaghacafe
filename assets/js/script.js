@@ -251,6 +251,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // letting order section in view
+  document.getElementById("locateBtn").addEventListener("click", () => {
+    gsap.to(window, {
+      scrollTo: "#locateUs",
+    });
+  });
+
   // letting gallery section in view
   homebtns.forEach((homebtn) => {
     homebtn.addEventListener("click", () => {
