@@ -47,13 +47,11 @@
     <nav
       class="font-secondary flex justify-between items-start gap-4 w-full fixed top-0 left-1/2 -translate-x-1/2 p-4 z-50 max-w-7xl mx-auto pointer-events-none"
     >
-      <p
-        class="home-btn text-4xl bg-amber-400 cursor-pointer pointer-events-auto"
-      >
-        Ka Kha
-        <br />
-        Gha Cafe
-      </p>
+      <img
+        src="./assets/img/logo.jpg"
+        alt="..."
+        class="w-32 block home-btn cursor-pointer pointer-events-auto"
+      />
       <!-- Menu open btn -->
       <button
         id="menu-btn"
@@ -171,37 +169,29 @@
         <!-- About section -->
         <section
           id="about-section"
-          class="flex items-center justify-center gap-8 max-w-4xl px-4 mx-auto py-32"
+          class="flex flex-col gap-12 max-w-4xl px-4 mx-auto py-32"
         >
-          <div class="flex flex-col gap-12">
-            <p
-              class="text-xl font-secondary border rounded-full border-amber-900 w-fit py-2 px-12 border-dashed inViewAnimation"
-            >
-              Our Story
-            </p>
-            <h3 class="text-8xl font-secondary inViewAnimation">
-              A Tale of
-              <span class="text-amber-500">Two Cuisines</span>
-            </h3>
-            <p class="text-2xl font-light inViewAnimation">
-              Born from a passion to unite Italy's rustic charm with North
-              India's royal grandeur, La Regale is more than a restaurant — it's
-              a cultural symphony on your plate. Our chefs have trained in the
-              kitchens of Rome and the royal courts of Lucknow, bringing
-              centuries of culinary tradition to every dish.
-              <br />
-              <br />
-              From hand-rolled pasta infused with saffron to tandoori platters
-              served on artisanal copper, every detail is crafted to transport
-              you to a world where flavor knows no borders.
-            </p>
-          </div>
-          <img
-            data-speed="1.25"
-            src="./assets/img/bg.jpg"
-            alt="..."
-            class="block w-full rounded-lg"
-          />
+          <p
+            class="text-xl font-secondary border rounded-full border-amber-900 w-fit py-2 px-12 border-dashed inViewAnimation"
+          >
+            Our Story
+          </p>
+          <h3 class="text-8xl font-secondary inViewAnimation">
+            A Tale of
+            <span class="text-amber-500">Two Cuisines</span>
+          </h3>
+          <p class="text-2xl inViewAnimation italic">
+            Born from a passion to unite Italy's rustic charm with North India's
+            royal grandeur, La Regale is more than a restaurant — it's a
+            cultural symphony on your plate. Our chefs have trained in the
+            kitchens of Rome and the royal courts of Lucknow, bringing centuries
+            of culinary tradition to every dish.
+            <br />
+            <br />
+            From hand-rolled pasta infused with saffron to tandoori platters
+            served on artisanal copper, every detail is crafted to transport you
+            to a world where flavor knows no borders.
+          </p>
         </section>
         <!-- LGBTQ+ & Cuisine -->
         <section class="py-20 px-4 max-w-4xl mx-auto">
@@ -591,54 +581,11 @@
             </h2>
           </div>
         </section>
-        <!-- Some more words -->
-        <section class="py-32 px-4 max-w-4xl mx-auto">
-          <div class="flex gap-12 items-center w-full justify-center mb-32">
-            <div class="relative">
-              <span
-                class="absolute top-4 inViewAnimation left-4 w-full h-full bg-[#97D3B0] border-2 border-[#F15330] block"
-              ></span>
-              <img
-                data-speed="1.05"
-                src="./assets/img/work-drink.png"
-                alt="..."
-                class="block relative z-10 border-2 border-[#F15330] max-w-96 min-w-96"
-              />
-            </div>
-            <h3 class="text-xl italic inViewAnimation">Brew, Relax & Unwind</h3>
-          </div>
-          <div class="flex gap-12 items-center w-full justify-center mb-32">
-            <h3 class="text-xl italic inViewAnimation">
-              Freshly Brewed, Perfectly Poured
-            </h3>
-            <div class="relative">
-              <span
-                class="absolute top-4 inViewAnimation left-4 w-full h-full bg-[#EF9D9D] border-2 border-[#DA2929] block"
-              ></span>
-              <img
-                data-speed="1.05"
-                src="./assets/img/drink-like.png"
-                alt="..."
-                class="block relative z-10 max-w-96 min-w-96 border-2 border-[#DA2929]"
-              />
-            </div>
-          </div>
-        </section>
         <!-- Contact Section -->
         <section
           id="contact-section"
           class="py-32 relative overflow-hidden px-4"
         >
-          <div
-            data-speed="1.2"
-            class="w-1/2 h-full block absolute top-0 left-0"
-          >
-            <img
-              src="./assets/img/coffee.jpg"
-              alt="..."
-              class="w-full h-full object-cover"
-            />
-          </div>
           <div
             class="max-w-4xl mx-auto font-secondary relative z-10 flex justify-end"
           >
@@ -789,18 +736,25 @@
         </section>
         <!-- Footer -->
         <footer
-          class="max-w-4xl mx-auto py-32 text-center flex flex-col justify-center items-center gap-5"
+          class="max-w-4xl mx-auto py-32 min-h-dvh text-center flex flex-col justify-center items-center gap-5"
         >
-          <h3 class="text-4xl font-secondary">
+          <img
+            src="./assets/img/logo.jpg"
+            alt="..."
+            class="w-32 mb-12 block mx-auto home-btn cursor-pointer pointer-events-auto inViewAnimation"
+          />
+          <h3 class="text-4xl font-secondary inViewAnimation">
             Ka Kha Ga Cafe
             <span class="font-primary text-lg">(Exclusively Veg Cafe)</span>
           </h3>
-          <p class="text-sm">
-            PK-01, Sector 122, Noida, Uttar Pradesh 201316 <br />
-            Mon-Sun: 10:00 AM - 11:00 PM <br />
-            +91 9876543210
+          <p class="text-sm inViewAnimation">
+            Serving pure vegetarian flavors with love at PK-01, Sector 122,
+            Noida, Uttar Pradesh 201316. <br />
+            Open Daily: 10:00 AM - 11:00 PM | Call Us: +91 9876543210
           </p>
-          <div class="flex justify-center gap-4 items-center text-2xl">
+          <div
+            class="flex justify-center gap-4 items-center text-2xl inViewAnimation"
+          >
             <a
               target="_blank"
               class="hover:text-amber-400 transition duration-500"
@@ -820,6 +774,9 @@
               ><i class="bi bi-whatsapp"></i
             ></a>
           </div>
+          <p class="text-sm mt-12 inViewAnimation">
+            © 2026 Ka Kha Ga Cafe - Exclusively Veg Cafe. All Rights Reserved.
+          </p>
         </footer>
       </div>
     </div>
