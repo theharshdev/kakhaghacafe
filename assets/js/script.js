@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menuData.forEach((section) => {
     const categoryEl = document.createElement("div");
     categoryEl.innerHTML = `
-    <h2 class="text-6xl mb-12 font-ternary pb-6 border-b border-amber-900 border-dashed">
+    <h2 class="text-6xl mb-12 font-secondary pb-6 border-b border-amber-900 border-dashed">
       ${section.category}
     </h2>
     <div class="grid md:grid-cols-2 gap-8">
