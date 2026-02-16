@@ -674,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Added horizontal scrolling
   const getScrollAmount = () => -(section.scrollWidth - wrapper.offsetWidth);
-  const anime = gsap.to(section, {
+  gsap.to(section, {
     x: getScrollAmount,
     ease: "none",
     scrollTrigger: {
