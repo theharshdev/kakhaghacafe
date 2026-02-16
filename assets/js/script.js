@@ -489,26 +489,22 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           name: "Stuffed Masala Chaap",
           price: 374,
-          description:
-            "Soft, melt-in-mouth dumplings brimming with creamy mushrooms and cheese.",
+          description: "Soft, melt-in-mouth dumplings brimming with creamy mushrooms and cheese.",
         },
         {
           name: "Cheese Stuffed Crimson Kebabs",
           price: 374,
-          description:
-            "Beetroot and garden-fresh vegetables filled with molten cheese and pan-grilled to perfection.",
+          description: "Beetroot and garden-fresh vegetables filled with molten cheese and pan-grilled to perfection.",
         },
         {
           name: "Cream Cheese & Mushroom Dumplings",
           price: 394,
-          description:
-            "Soft dumplings filled with creamy mushrooms and cheese.",
+          description: "Soft dumplings filled with creamy mushrooms and cheese.",
         },
         {
           name: "Miniature Burgers",
           price: 374,
-          description:
-            "1-inch aloo tikki sliders — tiny, soulful, and irresistible.",
+          description: "1-inch aloo tikki sliders — tiny, soulful, and irresistible.",
         },
         {
           name: "Pao Bhaji Shots",
@@ -555,8 +551,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           name: "Grilled Cheese Sandwich",
           price: 310,
-          description:
-            "Golden-buttered bread hugging molten cheese — simple, nostalgic, and oh-so-satisfying.",
+          description: "Golden-buttered bread hugging molten cheese — simple, nostalgic, and oh-so-satisfying.",
           customisable: true,
           type: "Veg",
         },
@@ -654,14 +649,14 @@ document.addEventListener("DOMContentLoaded", () => {
   menuData.forEach((section) => {
     const categoryEl = document.createElement("div");
     categoryEl.innerHTML = `
-    <h2 class="text-6xl mb-12 font-secondary pb-6 border-b border-amber-900 border-dashed">
+    <h2 class="lg:text-6xl md:text-5xl text-4xl mb-12 font-secondary pb-6 border-b border-amber-900 border-dashed">
       ${section.category}
     </h2>
     <div class="grid md:grid-cols-2 gap-8 italic">
       ${section.items
         .map(
           (item) =>
-            `<div class="flex justify-between gap-6"><div><h3 class="text-lg font-semibold">${item.name}</h3><p class="text-sm mt-1">${item.description}</p></div><div class="font-semibold text-lg">₹${item.price}</div></div>`,
+            `<div class="flex justify-between gap-6"><div><h3 class="md:text-lg text-base font-semibold">${item.name}</h3><p class="text-sm mt-1">${item.description}</p></div><div class="font-semibold text-lg">₹${item.price}</div></div>`,
         )
         .join("")}
     </div>
@@ -801,6 +796,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateProgress);
   window.addEventListener("resize", updateProgress);
 
+  // Image popup function
   scrollImgs.forEach((scrollImg) => {
     scrollImg.addEventListener("click", () => {
       const currentPath = scrollImg.getAttribute("src");
@@ -814,6 +810,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Close image popup
   closeImgPopup.addEventListener("click", () => {
     gsap.to(imagePopup, {
       scale: 0,
