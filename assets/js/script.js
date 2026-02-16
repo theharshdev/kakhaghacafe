@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Rice",
       items: [
@@ -72,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Raita",
       items: [
@@ -93,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Cold Beverages",
       items: [
@@ -159,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Small Bites",
       items: [
@@ -230,7 +226,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Salad",
       items: [
@@ -251,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Handmade Pasta",
       items: [
@@ -262,7 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Pizza",
       items: [
@@ -293,7 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Calzone",
       items: [
@@ -309,7 +301,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Soup",
       items: [
@@ -320,7 +311,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "North Indian Starters",
       items: [
@@ -356,7 +346,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "North Indian Main Course",
       items: [
@@ -472,7 +461,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-
     {
       category: "Mineral Water",
       items: [
