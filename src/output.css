@@ -841,6 +841,10 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
