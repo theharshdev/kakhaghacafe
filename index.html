@@ -1,4 +1,4 @@
-<!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
+<!-- npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/css/output.css" />
     <title>Ka Kha Gha Cafe</title>
   </head>
   <body class="bg-amber-100 text-amber-900 text-2xl font-primary">
@@ -32,7 +32,7 @@
       </button>
       <img
         id="popupImg"
-        src="./assets/img/gallery-img_1.webp"
+        src="./src/img/gallery-img_1.webp"
         alt="..."
         class="block w-full h-full object-contain max-w-fit max-h-fit rounded-lg border-3 border-dashed border-amber-400"
       />
@@ -42,7 +42,7 @@
       class="font-secondary flex justify-between items-start gap-4 w-full fixed top-0 left-1/2 -translate-x-1/2 p-4 z-50 max-w-7xl mx-auto pointer-events-none"
     >
       <img
-        src="./assets/img/logo.webp"
+        src="./src/img/logo.webp"
         alt="..."
         class="lg:w-32 md:w-24 sm:w-20 w-16 block home-btn cursor-pointer pointer-events-auto"
       />
@@ -53,7 +53,7 @@
         class="p-0 bg-transparent outline-0 text-[0px] border-0 transition duration-500 hover:rotate-12 pointer-events-auto"
       >
         Menu
-        <img src="./assets/img/menu.png" alt="..." class="md:w-14 w-12" />
+        <img src="./src/img/menu.png" alt="..." class="md:w-14 w-12" />
       </button>
       <!-- Menu Popup -->
       <div
@@ -126,7 +126,7 @@
         <main id="home-section" class="flex justify-center items-center gap-1 flex-col h-dvh text-center relative">
           <div class="absolute top-1/2 left-0 -translate-y-1/2 overflow-hidden w-1/2 h-full saturate-0">
             <video
-              src="./assets/img/cafe.mp4"
+              src="./src/img/cafe.mp4"
               data-speed="1.2"
               autoplay
               muted
@@ -180,7 +180,7 @@
           <div class="grid md:grid-cols-2 gap-8 text-center mb-20">
             <!-- Italian Cuisine -->
             <div>
-              <img src="./assets/img/salad.png" alt="..." class="max-w-24 w-full block mb-6 mx-auto inViewAnimation" />
+              <img src="./src/img/salad.png" alt="..." class="max-w-24 w-full block mb-6 mx-auto inViewAnimation" />
               <h3 class="text-2xl mb-4 inViewAnimation">Italian Cuisine</h3>
               <p class="text-sm inViewAnimation px-6">
                 From handcrafted pasta and wood-fired pizzas to creamy risottos and decadent desserts, our Italian menu
@@ -189,7 +189,7 @@
             </div>
             <!-- North Indian Cuisine -->
             <div>
-              <img src="./assets/img/laddoo.png" alt="..." class="max-w-24 w-full block mb-6 mx-auto inViewAnimation" />
+              <img src="./src/img/laddoo.png" alt="..." class="max-w-24 w-full block mb-6 mx-auto inViewAnimation" />
               <h3 class="text-2xl mb-4 inViewAnimation">North Indian Cuisine</h3>
               <p class="text-sm inViewAnimation px-6">
                 Experience the richness of North Indian spices, from buttery curries and aromatic biryanis to freshly
@@ -201,7 +201,7 @@
           <div>
             <div class="flex justify-center mb-12">
               <span class="text-xl flex flex-col gap-6 justify-center items-center inViewAnimation">
-                <img src="./assets/img/heart.png" alt="..." class="max-w-24 w-full block" />
+                <img src="./src/img/heart.png" alt="..." class="max-w-24 w-full block" />
                 LGBTQ+ Friendly
               </span>
             </div>
@@ -248,221 +248,221 @@
               <span class="text-sm lg:-mt-4 font-primary">down to View Gallery</span>
             </div>
             <img
-              src="./assets/img/gallery-img_1.webp"
+              src="./src/img/gallery-img_1.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_2.webp"
+              src="./src/img/gallery-img_2.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_3.webp"
+              src="./src/img/gallery-img_3.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_4.webp"
+              src="./src/img/gallery-img_4.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_5.webp"
+              src="./src/img/gallery-img_5.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_6.webp"
+              src="./src/img/gallery-img_6.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_7.webp"
+              src="./src/img/gallery-img_7.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_8.webp"
+              src="./src/img/gallery-img_8.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_9.webp"
+              src="./src/img/gallery-img_9.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_10.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-
-            <img
-              src="./assets/img/gallery-img_11.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_12.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_13.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_14.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_15.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_16.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_17.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_18.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_19.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_20.webp"
+              src="./src/img/gallery-img_10.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
 
             <img
-              src="./assets/img/gallery-img_21.webp"
+              src="./src/img/gallery-img_11.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_22.webp"
+              src="./src/img/gallery-img_12.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_23.webp"
+              src="./src/img/gallery-img_13.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_24.webp"
+              src="./src/img/gallery-img_14.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_25.webp"
+              src="./src/img/gallery-img_15.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_26.webp"
+              src="./src/img/gallery-img_16.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_27.webp"
+              src="./src/img/gallery-img_17.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_28.webp"
+              src="./src/img/gallery-img_18.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_29.webp"
+              src="./src/img/gallery-img_19.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_30.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-
-            <img
-              src="./assets/img/gallery-img_31.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_32.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_33.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_34.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_35.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_36.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_37.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_38.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_39.webp"
-              alt="..."
-              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
-            />
-            <img
-              src="./assets/img/gallery-img_40.webp"
+              src="./src/img/gallery-img_20.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
 
             <img
-              src="./assets/img/gallery-img_41.webp"
+              src="./src/img/gallery-img_21.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_42.webp"
+              src="./src/img/gallery-img_22.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
             <img
-              src="./assets/img/gallery-img_43.webp"
+              src="./src/img/gallery-img_23.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_24.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_25.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_26.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_27.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_28.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_29.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_30.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+
+            <img
+              src="./src/img/gallery-img_31.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_32.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_33.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_34.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_35.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_36.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_37.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_38.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_39.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_40.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+
+            <img
+              src="./src/img/gallery-img_41.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_42.webp"
+              alt="..."
+              class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
+            />
+            <img
+              src="./src/img/gallery-img_43.webp"
               alt="..."
               class="block w-52 h-72 object-cover shrink-0 max-h-200 rounded-lg border-2 cursor-pointer border-dashed border-amber-400 scrollImg hover:scale-110 transition duration-500"
             />
@@ -500,7 +500,7 @@
           <div class="absolute top-1/2 left-1/2 -translate-1/2">
             <img
               id="bgCupImg"
-              src="./assets/img/cup-bg.webp"
+              src="./src/img/cup-bg.webp"
               alt="..."
               class="md:max-w-md max-w-xs aspect-square rounded-full"
             />
@@ -524,7 +524,7 @@
               <span class="relative z-10 inViewAnimation">Where Italian Passion Meets North Indian Tradition</span>
               <img
                 data-speed="0.8"
-                src="./assets/img/cup-bg.webp"
+                src="./src/img/cup-bg.webp"
                 alt="..."
                 class="absolute bottom-0 right-0 w-36 block lg:translate-y-full aspect-square rounded-full"
               />
@@ -596,7 +596,7 @@
               href="https://www.swiggy.com/city/noida-1/ka-kha-ga-cafe-sector-122-sector-50-rest900290"
             >
               <img
-                src="./assets/img/swiggy-logo.png"
+                src="./src/img/swiggy-logo.png"
                 alt="..."
                 class="block lg:w-52 md:w-44 sm:w-40 w-32 h-auto mt-4 inViewAnimation"
               />
@@ -607,7 +607,7 @@
               href="https://www.zomato.com/ncr/ka-kha-ga-the-boutique-cafe-sector-122-noida"
             >
               <img
-                src="./assets/img/zomato-logo.png"
+                src="./src/img/zomato-logo.png"
                 alt="..."
                 class="block lg:w-48 md:w-40 sm:w-32 w-28 h-auto inViewAnimation"
               />
@@ -646,7 +646,7 @@
           class="max-w-4xl mx-auto py-32 px-6 min-h-dvh text-center flex flex-col justify-center items-center gap-5 inViewAnimation"
         >
           <img
-            src="./assets/img/logo.webp"
+            src="./src/img/logo.webp"
             alt="..."
             class="lg:w-32 md:w-24 sm:w-20 w-16 mb-12 block mx-auto home-btn cursor-pointer pointer-events-auto"
           />
@@ -687,6 +687,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./src/js/script.js"></script>
   </body>
 </html>
